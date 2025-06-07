@@ -1,3 +1,3 @@
 function showMessage() {
-  alert("Thanks for clicking!");
+  alert("Hello from your homepage!");
 }

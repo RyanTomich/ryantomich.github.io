@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+    <div class="container">
+    <main class="main-content">
+    <h1> Projects </h1>
+    <div class="project-grid">
+
+        <a href="project1.html" class="project-tile">
+            <img src="assets/project1.jpg" alt="Project 1">
+            <div class="project-info">
+            <h2>LightCode</h2>
+            <p>A Compiler Framework for Photonic–Electronic LLMs</p>
+            </div>
+        </a>
+
+        <a href="project2.html" class="project-tile">
+            <img src="assets/project2.jpg" alt="Project 2">
+            <div class="project-info">
+            <h2>Project 2</h2>
+            <p>Brief description of project 2.</p>
+            </div>
+    </a>
+
+
+    </div>
+    </main>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

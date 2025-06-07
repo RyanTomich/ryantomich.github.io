@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+    <div class="container">
+        <main class="main-content">
+            <h1> Resume </h1>
+            <p>There will be stuff here</p>
+        </main>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
