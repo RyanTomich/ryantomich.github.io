@@ -8,6 +8,13 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js">
+</script>
 </head>
 
 <body>
@@ -115,69 +122,11 @@
       </p>
 
       <h2> Travel </h2>
-      <h3> States </h3>
-      <p class="list">
-        <span> Montana </span>
-        <span> Washington State </span>
-        <span> Washington DC </span>
-        <span> California </span>
-        <span> Idaho </span>
-        <span> Arizona </span>
-        <span> Nevada </span>
-        <span> Colorado </span>
-        <span> Massachusetts </span>
-        <span> New York </span>
-        <span> Main </span>
-        <span> Florida </span>
-        <span> Texas </span>
-        <span> Utah </span>
-        <span> New Mexico </span>
-        <span> South Carolina </span>
-        <span> South Dakota </span>
-        <span> Pennsylvania </span>
-        <span> Wyoming </span>
-      </p>
-      <h3> National Parks + </h3>
-      <p class="list">
-        <span>Grand Teton </span>
-        <span>Yellowstone </span>
-        <span>Glacier </span>
-        <span>Acadia </span>
-        <span>Dry Tortugas </span>
-        <span>Everglades </span>
-        <span>Zion </span>
-        <span>Death Valley </span>
-        <span>Bryce Canyon </span>
-        <span>Yellowstone </span>
-        <span>Arches </span>
-        <span>Saguaro </span>
-        <span>Channel Islands </span>
-        <span>Haleakala </span>
-        <span>Joshaua Tree </span>
-        <span>Grand Canyon </span>
-        <span>Mount Rainier </span>
-        <span>North Cascades </span>
-        <span>Olympic </span>
-        <span>Crater Lake </span>
-        <span>Big Hole National Battlefield</span>
-        <span>Wilston's Creek National Battlefield</span>
-        <span>Gettysburg National Military Park</span>
-        <span>Grant-Kohrs Ranch NHS</span>
-        <span>Pennsylvania Avenue NHS</span>
-        <span>Salem Maritime NHS</span>
-        <span>Craters of the Moon National Monument</span>
-        <span>Montezuma Castle National Monument</span>
-        <span>Mount Rushmore National Memorial</span>
-        <span>Devils Tower National Monument</span>
-        <span>Lake Chelan National Recreation Area</span>
-        <span>Bighorn Canyon National Recreation Area</span>
-        <span>Cape Code National Seashore</span>
-      </p>
-
+      <div id="travel-map" style="height: 400px; border-radius: 10px;"></div>
     </main>
   </div>
 
 
-  <script src="script.js"></script> <!-- Link to external JS -->
+  <script src="scripts.js"></script>
 </body>
 </html>
