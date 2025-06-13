@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <div id="sidebar"></div>
+    <script>
+      fetch('/archive_sidebar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+        });
+    </script>
+
+    <main class="main-content">
+    <h1>Books</h1>
+      <h3>Nonfiction</h3>
+      <li><span class="book-title">Source Code</span> <span class="book-author">Bill Gates</span></li>
+      <li><span class="book-title">The Soul of a New Machine</span> <span class="book-author">Tracy Kidder</span></li>
+      <li><span class="book-title">The Man from the Future</span> <span class="book-author">Ananyo Bhattacharya</span></li>
+      <li><span class="book-title">Bitwise</span> <span class="book-author">David Auerbach</span></li>
+      <li><span class="book-title">Steve Jobs: The Man Who Thought Different</span> <span class="book-author">Karen Blumenthal</span></li>
+      <li><span class="book-title">Mind and Matter</span> <span class="book-author">John Urschel</span></li>
+      <li><span class="book-title">Surely You're Joking, Mr. Feynman</span> <span class="book-author">Richard Feynman</span></li>
+      <li><span class="book-title">Genius</span> <span class="book-author">James Gleick</span></li>
+
+      <h3>Theory</h3>
+      <li><span class="book-title">The Book of Why</span> <span class="book-author">Judea Pearl</span></li>
+      <li><span class="book-title">Superminds</span> <span class="book-author">Thomas W. Malone</span></li>
+      <li><span class="book-title">Turing’s Vision</span> <span class="book-author">Chris Bernhardt</span></li>
+      <li><span class="book-title">The 6 Types of Working Genius</span> <span class="book-author">Patrick Lencioni</span></li>
+
+      <h3>Fiction</h3>
+      <li><span class="book-title">Ender's Game</span> <span class="book-author">Orson Scott Card</span></li>
+      <li><span class="book-title">Harry Potter and the Sorcerer’s Stone</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Chamber of Secrets</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Prisoner of Azkaban</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Goblet of Fire</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Order of the Phoenix</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Half-Blood Prince</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Deathly Hallows</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Harry Potter and the Cursed Child</span> <span class="book-author">J. K. Rowling</span></li>
+      <li><span class="book-title">Willy Wonka & the Chocolate Factory</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">Charlie and the Great Glass Elevator</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">Matilda</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">James and the Giant Peach</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">Fantastic Mr. Fox</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">The BFG</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">The Witches</span> <span class="book-author">Roald Dahl</span></li>
+      <li><span class="book-title">Fablehaven: Rise of the Evening Star</span> <span class="book-author">Brandon Mull</span></li>
+      <li><span class="book-title">Fablehaven: Grip of the Shadow Plague</span> <span class="book-author">Brandon Mull</span></li>
+      <li><span class="book-title">Fablehaven: Secrets of the Dragon Sanctuary</span> <span class="book-author">Brandon Mull</span></li>
+      <li><span class="book-title">Fablehaven: Keys to the Demon Prison</span> <span class="book-author">Brandon Mull</span></li>
+      <li><span class="book-title">The Circle</span> <span class="book-author">Dave Eggers</span></li>
+      <li><span class="book-title">The Hobbit</span> <span class="book-author">J.R.R. Tolkien</span></li>
+      <li><span class="book-title">The Lord of the Rings</span> <span class="book-author">J.R.R. Tolkien</span></li>
+
+    </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

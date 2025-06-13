@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <div id="sidebar"></div>
+    <script>
+      fetch('archive_sidebar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+        });
+    </script>
+
+    <main class="main-content">
+    <p>
+      <strong>archive</strong> <em>ar·chive</em> —
+      (1) A place in which public records or historical materials (such as documents) are preserved —
+      Also refers to the material preserved
+      (2) A repository or collection especially of information.
+    </p>
+
+    </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
