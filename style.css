@@ -11,15 +11,17 @@
 html, body {
   margin: 0;
   padding: 0;
+  padding-top: 2%;
   height: 100%;
   background-color: var(--bg);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
 }
 
+
 h2, .title {
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 h1 {
@@ -30,6 +32,25 @@ h1 {
   margin-bottom: 2rem;
   border-left: 6px solid var(--highlight);
   padding-left: 12px;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 50;
+  color: var(--text-primary);
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+
+a {
+  display: block; /* forces each link to be on its own line */
+  color: var(--text-primary); /* use a light text color */
+  text-decoration: underline; /* makes it look like a link */
+  margin: 2px 10px; /* space between links */
+  /* font-weight: 400;
+  font-size: 1rem; */
+  /* transition: color 0.2s ease; */
 }
 
 /* CONTENT */
@@ -44,7 +65,8 @@ h1 {
 
 /* Sidebar styling */
 .sidebar {
-  width: 300px;
+  /* width: 300px; */
+  width: 15%;
   background-color: var(--bg);
   color: var(--text-primary);
   padding: 20px;
@@ -62,6 +84,13 @@ h1 {
   /* transition: color 0.2s ease; */
 }
 
+.sidebar p{
+  font-size: 1.1rem;
+  font-weight: 50;
+  color: var(--text-primary);
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
 
 /* Main content styling */
 .main-content {
@@ -72,7 +101,7 @@ h1 {
 }
 
 /* Responsive stacking on mobile */
-@media (max-width: 768px) {
+@media (max-width: 600px) { /* 768px */
   .container {
     flex-direction: column;
   }
@@ -171,12 +200,17 @@ h1 {
 /* NAV BAR */
 nav {
   background-color: var(--bg);
-  padding: 10px 20px;
+  width: 100%;
+  padding: 10px 0px;
+
   text-align: right;
   display: flex;
+  /* justify-content: right ; */
   justify-content: flex-end;
-  gap: 10px;
-  position: sticky;
+  gap: 1%;
+
+  /* position: sticky; */
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
@@ -210,12 +244,13 @@ nav a:hover {
 
 .list {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1;
   color: var(--text-primary);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
+  gap: 0.6rem;
+  padding: 0rem,0;
+  margin-left: 0;
 }
 
 .list span {
@@ -242,19 +277,21 @@ nav a:hover {
 /* PROJECTS */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 10px 0;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1%;
+  padding: 1% 0;
 }
 
 .project-tile {
-  display: block;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+
   background-color: var(--secondary);
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
   color: var(--text-primary);
-  /* box-shadow: 0 0 10px var(--highlight); */
   transition:
     transform 0.4s ease 0s,
     box-shadow 0.4s ease 0s;
@@ -269,14 +306,15 @@ nav a:hover {
 }
 
 .project-tile img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   display: block;
+  margin: auto;
 }
 
 .project-info {
-  padding: 15px;
+  padding: 3%;
 }
 
 .project-info h2 {
@@ -297,6 +335,10 @@ li {
   padding: 4px 6px;
   background-color: var(--transparent_highlight);
   border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;        /* allow content to wrap */
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .book-title {
@@ -304,7 +346,8 @@ li {
   font-weight: 400;
   font-size: 1rem;
   color: var(--text-primary);
-
+  flex: 1 1 auto;         /* allow growing and shrinking */
+  min-width: 50%;         /* to help wrap when space is tight */
 }
 
 .book-author {
@@ -313,4 +356,6 @@ li {
   color: var(--text-secondary);
   font-style: italic;
   float: right;
+  margin-left: auto;      /* push to right when there's space */
+
 }

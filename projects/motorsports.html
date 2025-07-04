@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motorsports</title>
+  <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+  </div>
+
+    <div  class="container">
+      <main class="main-content">
+        <h1> Motorsports
+
+            <div class="social-icons", style="display:flex; justify-content:flex-start">
+
+                <a href="https://fsae.mit.edu/" target="_blank" aria-label="GitHub">
+                <i class="fas fa-globe"></i>
+                </a>
+
+            </div>
+        </h1>
+
+        <h2 style="text-align:center; margin-left: 10rem; margin-right: 10rem;"> Controls </h2>
+
+        <figure style="text-align:center;">
+        <img src="/assets/Pacejka Surface Small.png"
+            style="display:block;margin:0 auto;width:40%;max-width:800px;height:auto;">
+        <figcaption> The Pacejka tire model (Magic Formula) for calculating how much force is generated from a tire. </figcaption>
+        </figure>
+
+        <a href="https://en.wikipedia.org/wiki/Hans_B._Pacejka">Hans_B._Pacejka</a>
+
+      </main>
+    </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>

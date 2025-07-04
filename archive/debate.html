@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <div id="sidebar"></div>
+    <script>
+      fetch('/archive_sidebar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+        });
+    </script>
+
+    <main class="main-content">
+    <h1>Debate</h1>
+    <h2>Stats</h2>
+
+      <p style="margin-left: 0px">
+        NSDA Points: 827 <br>
+        Degree: Superior Distinction <br>
+        Career W-L: 69-78 <br>
+        competition speaking time: 50+ hr<br>
+        Evidence cut: 1200 <br>
+        Case Plans Contributed to: 15 <br>
+        Briefs Contributed to: 23 <br>
+      </p>
+
+    <h2>Events</h2>
+      <li><span class="book-title">Policy (CX) </span> <span class="book-author"></span></li>
+      <li><span class="book-title">Public Forum (PF) </span> <span class="book-author"></span></li>
+      <li><span class="book-title">World Schools (WS) </span> <span class="book-author"></span></li>
+      <li><span class="book-title">Extemporaneous speaking (EXP) </span> <span class="book-author"></span></li>
+      <li><span class="book-title">Extemporaneous speaking (IMP) </span> <span class="book-author"></span></li>
+    <h2>Topics Debated</h2>
+      <p style="margin-left: 0px">
+        Resolved: The United States federal government should substantially increase_ in one or more of the following areas: Policing, Sentencing, and Forensic Science. (2020-2021) <br>
+        Resolved: The United States federal government should substantially increase our water security. (2021-2022) <br>
+        Resolved: The United States federal government should substantially increase cooperation with the North Atlantic Treaty Orgonization (NATO) in one or more of the following areas: Artificial Intelligence, Biotechnology, Cybersecurity. (2022-2023) <br>
+      </p>
+    <p class="list", style="margin: 0px">
+      <span> Venezuela Economic Sanctions </span>
+      <span> Taiwan Free Trade Agreement </span>
+      <span> Automated Fingerprint Identification Systems </span>
+      <span> National Center for Forensic Science </span>
+      <span> Statute of limitations </span>
+      <span> Aquaculture </span>
+      <span> Water treatment facility Operating Systems </span>
+      <span> Cryptosporidium </span>
+      <span> Water Filtration </span>
+      <span> Radiation Portal Monotors </span>
+      <span> Sea Mines and Mine Counter Measures </span>
+      <span> Prions Disease </span>
+    </p>
+
+    </main>
+  <script src="/scripts.js"></script>
+</body>
+</html>

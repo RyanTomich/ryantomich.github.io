@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LightCode</title>
+  <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+  </div>
+
+    <div  class="container">
+      <main class="main-content">
+        <h1> LightCode
+
+            <div class="social-icons", style="display:flex; justify-content:flex-start">
+                <a href="https://github.com/RyanTomich/LightCode" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+                </a>
+                <a href="https://ryantomich.github.io/LightCode/" target="_blank" aria-label="Scholar">
+                <i class="fas fa-book-open"></i>
+                </a>
+            </div>
+        </h1>
+
+        <h2 style="text-align:center;"> LightCode: Compiling LLM Inference for Photonic-Electronic Systems </h2>
+
+        <figure style="text-align:center;">
+        <img src="/assets/Architecture%20Small.png"
+            style="display:block;margin:0 auto;width:40%;max-width:800px;height:auto;">
+        <figcaption> Hybrid execution model with compiler-managed partitioning and scheduling <br>
+                        across the GPU and Photonic Tensor Unit (PTU). A) Graph partitioning, <br>
+                        B) Stack construction, C) Candidate selection, D) Scheduling. </figcaption>
+        </figure>
+
+        <p>
+            The growing demand for low-latency, energy-efficient inference in large language models (LLMs) has catalyzed inter-
+            est in heterogeneous architectures. While GPUs remain dominant, they are poorly suited for integration with emerg-
+            ing domain-specific accelerators like the Photonic Tensor Units (PTUs), which offer low-power, high-throughput lin-
+            ear computation. This motivates hybrid compilation strategies that combine photonic and electronic resources. We
+            present LightCode, a compiler framework and simulator for mapping LLM inference workloads across hybrid pho-
+            tonic-electronic systems. LightCode introduces the Stacked Graph, an intermediate representation that encodes mul-
+            tiple hardware-specific realizations of each tensor operation. Hardware assignment is formulated as a constrained
+            subgraph selection problem optimized for latency or energy under parametric cost models. We evaluate LightCode
+            on the prefill stage of GPT-2 and Llama-7B showing that under our workload and hardware assumptions, (i) Photonic
+            hardware reduced energy by up to 50 % in our simulated workloads at maximum sequence length; (ii) multiplexing and
+            assignment strategy yielded latency improvements exceeding 10×; and (iii) Optimizing for latency or energy resulted
+            in distinct hardware mappings in our simulations. LightCode offers a module, foundational framework and simulator
+            for compiling LLMs to emerging photonic accelerators.
+        </p>
+      </main>
+    </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>

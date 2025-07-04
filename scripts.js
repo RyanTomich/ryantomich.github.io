@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { name: "New Mexico", lat: 34.5199, lon: -105.8701 },
     { name: "Charleston, South Carolina", lat: 32.7833, lon: -79.9320 },
     { name: "South Dakota", lat: 43.9695, lon: -99.9018 },
-    { name: "Pennsylvania", lat: 41.2033, lon: -77.1945 },
+    { name: "Philadelphia, Pennsylvania", lat: 39.9515, lon: -75.1910 },
     { name: "Wyoming", lat: 43.0759, lon: -107.2903 },
     { name: "New Orleans, Louisiana", lat: 29.9509, lon: -90.0758 },
     { name: "Cancúnm Mexico", lat: 21.1619, lon: -86.8515 },

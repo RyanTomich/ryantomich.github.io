@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <div id="sidebar"></div>
+    <script>
+      fetch('/archive_sidebar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+        });
+    </script>
+
+    <main class="main-content">
+    <h1>Running</h1>
+    <p style="margin-left: 0px"> Shoe: Saucony Triumph 19</p>
+    <h2>PR</h2>
+    <li><span class="book-title">5000m: 17:58.90 </span> <span class="book-author">Butte High Invitational</span></li>
+    <li><span class="book-title">3200m: 11:00.78 </span> <span class="book-author">Western AA Divisional Track Meet</span></li>
+    <li><span class="book-title">1600m: 5:16.67 </span> <span class="book-author">Western AA Divisional Track Meet</span></li>
+    <li><span class="book-title">800m: 2:19.37 </span> <span class="book-author">Sentinel/Hellgate/Butte/BC Quad</span></li>
+
+    <h2>Notable Races</h2>
+    <a href="https://bloomsdayrun.org/">bloomsday</a>
+
+    </main>
+  <script src="/scripts.js"></script>
+</body>
+</html>
