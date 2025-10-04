@@ -1,6 +1,6 @@
 :root {
   --bg: #161616;
-  --transparent_bg:#16161698;
+  --transparent_bg: #16161698;
   --secondary: #1a74df;
   --highlight: #1973e1;
   --transparent_highlight: #1973e18a;
@@ -8,7 +8,8 @@
   --text-secondary: #dadbfd8b;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   padding-top: 2%;
@@ -19,7 +20,8 @@ html, body {
 }
 
 
-h2, .title {
+h2,
+.title {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 2px;
 }
@@ -44,10 +46,14 @@ p {
 
 
 a {
-  display: block; /* forces each link to be on its own line */
-  color: var(--text-primary); /* use a light text color */
-  text-decoration: underline; /* makes it look like a link */
-  margin: 2px 10px; /* space between links */
+  display: block;
+  /* forces each link to be on its own line */
+  color: var(--text-primary);
+  /* use a light text color */
+  text-decoration: underline;
+  /* makes it look like a link */
+  margin: 2px 10px;
+  /* space between links */
   /* font-weight: 400;
   font-size: 1rem; */
   /* transition: color 0.2s ease; */
@@ -60,7 +66,8 @@ a {
   flex-direction: row;
   padding: 20px;
   gap: 20px;
-  flex-wrap: wrap; /* just in case there's overflow */
+  flex-wrap: wrap;
+  /* just in case there's overflow */
 }
 
 /* Sidebar styling */
@@ -74,17 +81,21 @@ a {
   flex-shrink: 0;
 }
 
-.sidebar a{
-  display: block; /* forces each link to be on its own line */
-  color: var(--text-primary); /* use a light text color */
-  text-decoration: underline; /* makes it look like a link */
-  margin: 2px 10px; /* space between links */
+.sidebar a {
+  display: block;
+  /* forces each link to be on its own line */
+  color: var(--text-primary);
+  /* use a light text color */
+  text-decoration: underline;
+  /* makes it look like a link */
+  margin: 2px 10px;
+  /* space between links */
   /* font-weight: 400;
   font-size: 1rem; */
   /* transition: color 0.2s ease; */
 }
 
-.sidebar p{
+.sidebar p {
   font-size: 1.1rem;
   font-weight: 50;
   color: var(--text-primary);
@@ -101,7 +112,9 @@ a {
 }
 
 /* Responsive stacking on mobile */
-@media (max-width: 600px) { /* 768px */
+@media (max-width: 600px) {
+
+  /* 768px */
   .container {
     flex-direction: column;
   }
@@ -119,7 +132,8 @@ a {
 
 .social-icons {
   display: flex;
-  justify-content: space-evenly; /* Even horizontal spacing */
+  justify-content: space-evenly;
+  /* Even horizontal spacing */
   padding: 10px 0;
   margin-top: 10px;
 }
@@ -249,7 +263,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  padding: 0rem,0;
+  padding: 0rem, 0;
   margin-left: 0;
 }
 
@@ -336,7 +350,8 @@ li {
   background-color: var(--transparent_highlight);
   border-radius: 6px;
   display: flex;
-  flex-wrap: wrap;        /* allow content to wrap */
+  flex-wrap: wrap;
+  /* allow content to wrap */
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -346,8 +361,10 @@ li {
   font-weight: 400;
   font-size: 1rem;
   color: var(--text-primary);
-  flex: 1 1 auto;         /* allow growing and shrinking */
-  min-width: 50%;         /* to help wrap when space is tight */
+  flex: 1 1 auto;
+  /* allow growing and shrinking */
+  min-width: 50%;
+  /* to help wrap when space is tight */
 }
 
 .book-author {
@@ -356,6 +373,7 @@ li {
   color: var(--text-secondary);
   font-style: italic;
   float: right;
-  margin-left: auto;      /* push to right when there's space */
+  margin-left: auto;
+  /* push to right when there's space */
 
 }
