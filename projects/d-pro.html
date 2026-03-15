@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>D-Pro</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body class="project-page">
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h1>D-Pro</h1>
+      <div class="social-icons">
+        <a href="/assets/d-pro.pdf" target="_blank" aria-label="PDF">
+          <i class="fas fa-file-alt"></i>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h2 style="text-align:center;">D-Pro</h2>
+
+      <figure class="project-hero">
+        <embed src="/assets/d-pro.pdf#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+        <figcaption>The first page preview for the D-Pro PDF.</figcaption>
+      </figure>
+
+      <div class="link">
+        <a href="/assets/d-pro.pdf" target="_blank">View PDF</a>
+      </div>
+
+      <p>
+        This page provides a preview of the D-Pro document and links directly to the full PDF.<sup class="footnote-ref">1</sup>
+        <span class="sidenote"><strong>1.</strong> Source document: <a href="/assets/d-pro.pdf" target="_blank">d-pro.pdf</a>.</span>
+      </p>
+    </main>
+  </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>

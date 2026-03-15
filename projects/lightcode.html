@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
-<body>
+<body class="project-page">
   <div id="navbar"></div>
   <script>
     fetch('/navbar.html')
@@ -16,30 +16,26 @@
         document.getElementById('navbar').innerHTML = html;
       });
   </script>
-  </div>
 
-    <div  class="container">
+    <div class="container">
+      <aside class="sidebar">
+        <h1>LightCode</h1>
+        <div class="social-icons">
+          <a href="https://github.com/RyanTomich/LightCode" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://arxiv.org/pdf/2509.16443?" target="_blank" aria-label="Paper">
+            <i class="fas fa-file-alt"></i>
+          </a>
+        </div>
+      </aside>
+
       <main class="main-content">
-        <h1> LightCode
+        <h2 style="text-align:center;">LightCode: Compiling LLM Inference for Photonic-Electronic Systems</h2>
 
-            <div class="social-icons", style="display:flex; justify-content:flex-start">
-                <a href="https://github.com/RyanTomich/LightCode" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-                </a>
-                <a href="https://ryantomich.github.io/LightCode/" target="_blank" aria-label="Scholar">
-                <i class="fas fa-book-open"></i>
-                </a>
-            </div>
-        </h1>
-
-        <h2 style="text-align:center;"> LightCode: Compiling LLM Inference for Photonic-Electronic Systems </h2>
-
-        <figure style="text-align:center;">
-        <img src="/assets/Architecture%20Small.png"
-            style="display:block;margin:0 auto;width:40%;max-width:800px;height:auto;">
-        <figcaption> Hybrid execution model with compiler-managed partitioning and scheduling <br>
-                        across the GPU and Photonic Tensor Unit (PTU). A) Graph partitioning, <br>
-                        B) Stack construction, C) Candidate selection, D) Scheduling. </figcaption>
+        <figure class="project-hero">
+          <img src="/assets/Architecture%20Small.png" alt="LightCode hybrid execution model architecture">
+          <figcaption>Hybrid execution model with compiler-managed partitioning and scheduling across the GPU and Photonic Tensor Unit (PTU).</figcaption>
         </figure>
 
         <p>
@@ -50,14 +46,15 @@
             present LightCode, a compiler framework and simulator for mapping LLM inference workloads across hybrid pho-
             tonic-electronic systems. LightCode introduces the Stacked Graph, an intermediate representation that encodes mul-
             tiple hardware-specific realizations of each tensor operation. Hardware assignment is formulated as a constrained
-            subgraph selection problem optimized for latency or energy under parametric cost models. We evaluate LightCode
+            subgraph selection problem optimized for latency or energy under parametric cost models.<sup class="footnote-ref">1</sup>
+            <span class="sidenote"><strong>1.</strong> LightCode paper: <a href="https://arxiv.org/pdf/2509.16443?" target="_blank">arXiv preprint</a>.</span>
+            We evaluate LightCode
             on the prefill stage of GPT-2 and Llama-7B showing that under our workload and hardware assumptions, (i) Photonic
             hardware reduced energy by up to 50 % in our simulated workloads at maximum sequence length; (ii) multiplexing and
             assignment strategy yielded latency improvements exceeding 10×; and (iii) Optimizing for latency or energy resulted
             in distinct hardware mappings in our simulations. LightCode offers a module, foundational framework and simulator
-            for compiling LLMs to emerging photonic accelerators.
-            
-            https://arxiv.org/pdf/2509.16443?
+            for compiling LLMs to emerging photonic accelerators.<sup class="footnote-ref">2</sup>
+            <span class="sidenote"><strong>2.</strong> Code and experimental artifacts: <a href="https://github.com/RyanTomich/LightCode" target="_blank">RyanTomich/LightCode</a>.</span>
         </p>
       </main>
     </div>

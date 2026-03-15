@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FPoGA</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body class="project-page">
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h1>FPoGA</h1>
+      <div class="social-icons">
+        <a href="/assets/FPoGA.pdf" target="_blank" aria-label="PDF">
+          <i class="fas fa-file-alt"></i>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h2 style="text-align:center;">A Personal Project for a Class</h2>
+
+      <figure class="project-hero">
+        <img src="/assets/FPoGA_img.png" alt="FPoGA cover image">
+        <figcaption>Cover image for the FPoGA class project.</figcaption>
+      </figure>
+
+      <div class="link">
+        <a href="/assets/FPoGA.pdf" target="_blank">View Project (PDF)</a>
+      </div>
+
+      <p>
+        FPoGA is a personal project created for a class and documented in the linked PDF.<sup class="footnote-ref">1</sup>
+        <span class="sidenote"><strong>1.</strong> Source document: <a href="/assets/FPoGA.pdf" target="_blank">FPoGA.pdf</a>.</span>
+        The projects page uses the associated cover image for the tile, while this page keeps a direct PDF link in the same style as the resume page.
+      </p>
+    </main>
+  </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>

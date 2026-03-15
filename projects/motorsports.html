@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
-<body>
+<body class="project-page">
   <div id="navbar"></div>
   <script>
     fetch('/navbar.html')
@@ -16,30 +16,31 @@
         document.getElementById('navbar').innerHTML = html;
       });
   </script>
-  </div>
 
-    <div  class="container">
+    <div class="container">
+      <aside class="sidebar">
+        <h1>Motorsports</h1>
+        <div class="social-icons">
+          <a href="https://fsae.mit.edu/" target="_blank" aria-label="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+        </div>
+      </aside>
+
       <main class="main-content">
-        <h1> Motorsports
+        <h2 style="text-align:center;">Controls</h2>
 
-            <div class="social-icons", style="display:flex; justify-content:flex-start">
-
-                <a href="https://fsae.mit.edu/" target="_blank" aria-label="GitHub">
-                <i class="fas fa-globe"></i>
-                </a>
-
-            </div>
-        </h1>
-
-        <h2 style="text-align:center; margin-left: 10rem; margin-right: 10rem;"> Controls </h2>
-
-        <figure style="text-align:center;">
-        <img src="/assets/Pacejka Surface Small.png"
-            style="display:block;margin:0 auto;width:40%;max-width:800px;height:auto;">
-        <figcaption> The Pacejka tire model (Magic Formula) for calculating how much force is generated from a tire. </figcaption>
+        <figure class="project-hero">
+          <img src="/assets/Pacejka Surface Small.png" alt="Pacejka tire model surface">
+          <figcaption>The Pacejka tire model (Magic Formula) for calculating how much force is generated from a tire.</figcaption>
         </figure>
 
-        <a href="https://en.wikipedia.org/wiki/Hans_B._Pacejka">Hans_B._Pacejka</a>
+        <p>
+          My work with MIT Motorsports focused on vehicle dynamics and controls for the Formula SAE program. A core modeling tool is the Pacejka tire model, which provides a practical nonlinear approximation of tire forces as slip conditions change.<sup class="footnote-ref">1</sup>
+          <span class="sidenote"><strong>1.</strong> Team site: <a href="https://fsae.mit.edu/" target="_blank">MIT Motorsports</a>.</span>
+          This model is widely used when building controllers, validating simulations, and reasoning about how setup changes affect grip across the operating envelope.<sup class="footnote-ref">2</sup>
+          <span class="sidenote"><strong>2.</strong> Background on the model: <a href="https://en.wikipedia.org/wiki/Hans_B._Pacejka" target="_blank">Hans B. Pacejka</a>.</span>
+        </p>
 
       </main>
     </div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weight of the Genome</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body class="project-page">
+  <div id="navbar"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h1>Weight of the Genome</h1>
+      <div class="social-icons">
+        <a href="/assets/Weight%20of%20the%20Genome.pdf" target="_blank" aria-label="PDF">
+          <i class="fas fa-file-alt"></i>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h2 style="text-align:center;">Biography of Eric Lander</h2>
+
+      <figure class="project-hero">
+        <embed src="/assets/Weight%20of%20the%20Genome.pdf#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+        <figcaption>The paper cover and opening page for <em>Weight of the Genome</em>.</figcaption>
+      </figure>
+
+      <div class="link">
+        <a href="/assets/Weight%20of%20the%20Genome.pdf" target="_blank">View Paper (PDF)</a>
+      </div>
+
+      <p>
+        <em>Weight of the Genome</em> is a paper project centered on Eric Lander and his influence on modern genomics, research institutions, and the broader relationship between biology and computation.<sup class="footnote-ref">1</sup>
+        <span class="sidenote"><strong>1.</strong> Source document: <a href="/assets/Weight%20of%20the%20Genome.pdf" target="_blank">Weight of the Genome.pdf</a>.</span>
+        This page serves as a landing point for the work and provides direct access to the full paper in PDF form.
+      </p>
+    </main>
+  </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>
