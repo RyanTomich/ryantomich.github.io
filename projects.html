@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Projects | Ryan Tomich</title>
+  <link rel="icon" type="image/jpeg" href="/assets/Ryan%20Tomich%20Headshot.jpeg">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
   <div id="navbar"></div>
   <script>
-    fetch('navbar.html')
+    fetch('/navbar.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('navbar').innerHTML = html;
