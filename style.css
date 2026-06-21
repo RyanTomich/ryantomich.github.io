@@ -553,9 +553,22 @@ nav a:hover {
 }
 
 .project-info h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
   margin: 0 0 10px;
   font-size: 1.25rem;
   font-family: 'Orbitron', sans-serif;
+}
+
+.project-year {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
+  letter-spacing: normal;
+  white-space: nowrap;
 }
 
 .project-info p {
